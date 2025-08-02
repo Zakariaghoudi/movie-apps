@@ -1,0 +1,63 @@
+/* ====== MOVIE CARD STYLES ====== */
+
+/* Main container for the movie card */
+.movie-card {
+  background: var(--color-background-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  cursor: pointer;
+  position: relative;
+  height: 100%; /* Ensures cards in a grid have the same height */
+}
+
+/* Hover effect for interactivity */
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Movie poster image */
+.movie-card-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  /* Add a subtle gradient overlay at the bottom of the poster */
+  mask-image: linear-gradient(to top, transparent 0%, black 20%);
+}
+
+/* Content area below the poster */
+.movie-card-content {
+  padding: 0.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1; /* Allows content to fill the remaining space */
+}
+
+/* Movie title */
+.movie-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Movie description */
+.movie-card-description {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  /* Clamp the description to 2 lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1; /* Pushes the rating to the bottom */
+}
+
+
