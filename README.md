@@ -1,36 +1,7 @@
-# Favorite Movies & TV Shows
+## Favorite Movies & TV Shows
 
 This is an interactive web application built with React.js for managing and displaying a list of your favorite movies and TV shows. The application allows users to browse a collection of movies, add new entries, and easily filter the list by title or minimum rating.
 
-## Key Features
-
-- **Movie Listing:** A clean and responsive list view of all movies, each with its title, description, and star rating.
-- **Add New Movie:** A dedicated form to easily add a new movie to the list. The form includes fields for:
-  - `Title`
-  - `Description`
-  - `Poster URL`
-  - `Rating (0-5)`
-- **Dynamic Filtering:** Users can filter the movie list in real-time by:
-  - **Title:** Searching for a specific movie title.
-  - **Minimum Rating:** Displaying only movies that meet or exceed a certain rating.
-- **Detailed View:** Clicking on a movie card takes the user to a detailed view, which includes a full description and an embedded YouTube trailer.
-
-## Project Structure
-
-The project is structured with a modular component-based approach using React. This makes the code organized, reusable, and easy to maintain.
-Here is the README.md file for your project. This version incorporates the file structure and visual elements shown in the provided images, and is structured to be clear and professional.
-Suggested README.md file content
-# Favorite Movies & TV Shows
-
-This is an interactive web application built with React.js for managing and displaying a list of your favorite movies and TV shows. The application allows users to browse a collection of movies, add new entries, and easily filter the list by title or minimum rating.
-
-## Screenshots
-
-<p align="center">
-  <img src="http://googleusercontent.com/file_content/4" alt="Movie List and Filtering" width="200">
-  <img src="http://googleusercontent.com/file_content/1" alt="Add New Movie Form" width="200">
-  <img src="http://googleusercontent.com/file_content/0" alt="Movie Details with Trailer" width="200">
-</p>
 
 ## Key Features
 
