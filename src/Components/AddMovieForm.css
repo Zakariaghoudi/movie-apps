@@ -74,6 +74,8 @@ h2 {
 @media (max-width: 768px) {
   .add-movie-container {
     padding: 1rem;
+      position: relative;
+     right: 0rem;
   }
 
   .add-movie-form {
