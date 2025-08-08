@@ -1,13 +1,18 @@
-
 .movie-description {
+  position: relative;
+  bottom: 55px;
   text-align: center;
-  max-width: 500px;
+  max-width: 90%; /* Use percentage for max-width */
   margin: 40px auto;
-  display:block ;
+  display: block;
   align-items: center;
   align-content: center;
-  text-align: center;
 }
+.movie-description h2{
+  color:black;
+  font-size:30px;
+}
+
 .movie-description p {
   background: #fff;
   border-radius: 12px;
@@ -18,12 +23,15 @@
 .movie-description iframe {
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make iframe width responsive */
+  max-width: 560px; /* Set a max-width for the iframe */
+  height: 315px; /* Standard aspect ratio height */
 }
 
 .movie-description button {
   position: relative;
-  left: 11rem;
-  background: #1976d2;
+  left: 0; /* Reset left to 0 for better responsiveness */
+  background:rgb(124, 2, 2);
   color: #fff;
   border: none;
   padding: 10px 28px;
@@ -35,19 +43,37 @@
 }
 
 .movie-description button:hover {
-  background: #125ea2;
+  background: #b40303;
 }
-@media (max-width:700px) {
-  .movie-description,
-  iframe{
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    width: 400px;
+
+@media (max-width: 700px) {
+  .movie-description {
+    max-width: 95%;
+    margin: 20px auto;
   }
-    .movie-description button{
-    width: 200px;
-    position: relative;
-    left: 1rem;
+  .movie-description iframe {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+  .movie-description button{
+    width: auto; /* Allow button width to adjust */
+    padding: 10px 20px;
+    left: 0; /* Ensure button is centered or naturally positioned */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-description h2{
+    font-size:24px;
+  }
+  .movie-description p {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  .movie-description iframe {
+    height: 200px;
+  }
+  .movie-description button{
+    font-size: 0.9rem;
+    padding: 8px 15px;
   }
 }

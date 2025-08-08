@@ -1,4 +1,3 @@
-  import "./MovieCard.css";
 import {Rating} from '@mui/material';
 function MovieCard({ movie }) {
   const { title, description, posterURL, rating } = movie;
@@ -9,9 +8,8 @@ function MovieCard({ movie }) {
       <div className="movie-card-content">
         <h3 className="movie-card-title">{title}</h3>
         <p className="movie-card-description">{description}</p>
-<div className="movie-card-rating" >
-  {/* rating with material ui */}
-  <Rating
+    <div className="movie-card-rating" >
+     <Rating
   name="read-only"
   value={rating}
   precision={0.5}

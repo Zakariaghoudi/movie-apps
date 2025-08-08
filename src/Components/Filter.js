@@ -21,26 +21,18 @@ function Filter({ onFilterChange }) {
         setRatingFilter(value);
       }
     }
-    onFilterChange({ title: titleFilter, rating: value === '' ? '' : value });
+    onFilterChange({ title: titleFilter === '' ? '' : value });
   };
 
   return (
     <div className="filter-container">
       <input
         type="text"
-        placeholder="Filter by title"
+        placeholder="Typing your film name ..."
         value={titleFilter}
         onChange={handleTitleChange}
       />
-      <input
-        type="number"
-        placeholder="Filter by min rating (0-5)"
-        value={ratingFilter}
-        onChange={handleRatingChange}
-        min="0"
-        max="5"
-        step="0.1"
-      />
+     
     </div>
   );
 }

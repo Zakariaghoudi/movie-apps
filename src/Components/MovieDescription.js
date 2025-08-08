@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import './MovieDescription.css'
 function MovieDescription({ movies }) {
+  
   const { id } = useParams();
   const navigate = useNavigate();
   const movie = movies.find((m) => m.id === parseInt(id));
@@ -8,6 +9,7 @@ function MovieDescription({ movies }) {
   if (!movie) return <div>Movie not found</div>;
 
   return (
+
     <div className="movie-description">
       <p>{movie.description}</p>
       <iframe

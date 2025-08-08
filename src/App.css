@@ -1,138 +1,85 @@
-/* ====== GLOBAL RESET & BASE ======*/
 body {
-  margin: 0;
-  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-  color: #fff;
-  min-height: 100vh;
-    background: linear-gradient(120deg, #494444 30%, #232526 100%);
-
+    background-image: url('https://4.bp.blogspot.com/-i7VyGtectL4/VuLJElS0NCI/AAAAAAAACYA/yDctYC4BApIjSDwGcCh3nCyiSYZSMOMIg/w1200-h630-p-k-no-nu/which-kung-fu-panda-film-is-your-favorite-817592.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; /* Changed to cover */
+    background-attachment: fixed; /* Added for fixed background */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
 }
 
-h1{
-color: #ee545b;
-text-align: center;
-padding: 15px ;
-}
-
-h1 :hover {
-color: #d6000bd5;
-}
-
-/* ====== ADD MOVIE FORM ====== */
-.add-movie-form {
-  background: rgba(24, 24, 24, 0.95);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px 0 #000a;
-  padding: 2rem 2rem 1.5rem 2rem;
-  max-width: 400px;
-  margin: 0 auto 2rem auto;
+.main-content-container {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  min-height: 100vh; /* Ensure it takes full viewport height */
 }
 
-.add-movie-form h2 {
-  color: #e50914;
-  font-size: 1.7rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.add-movie-form input,
-.add-movie-form textarea {
-  background: #232526;
-  border: none;
-  border-radius: 8px;
-  padding: 0.9rem 1rem;
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-  outline: none;
-  transition: background 0.2s;
-}
-
-.add-movie-form input:focus,
-.add-movie-form textarea:focus {
-  background: #333;
-}
-
-.add-movie-form button {
-  background: #e50914;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.9rem 1rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px #0007;
-}
-
-.add-movie-form button:hover {
-  background: #b0060f;
-}
-
-/* ====== FILTER BAR ====== */
-.filter-bar {
-  background: rgba(24, 24, 24, 0.95);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px 0 #000a;
-  padding: 1.2rem 2rem;
-  margin: 0 auto 2.5rem auto;
-  max-width: 700px;
+.content-area {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  flex-grow: 1; /* Allow content area to grow */
 }
 
-.filter-bar input {
-  background: #232526;
-  border: none;
-  border-radius: 8px;
-  padding: 0.8rem 1.2rem;
-  color: #fff;
-  font-size: 1rem;
-  outline: none;
-  transition: background 0.2s;
-}
-
-.filter-bar input:focus {
-  background: #333;
-}
-
-/* ====== MOVIE GRID ====== */
 .movie-list {
+  margin: 25px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Changed 3fr to 1fr for better responsiveness */
+  gap: 3rem;
   padding: 0 0 2rem 0;
+  justify-items: center; /* Center items in the grid */
+}
+
+.filter-add-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items to the start vertically */
+  max-width: 100%;
+  padding: 0 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+h1 {
+  text-align: start;
+  margin-left: 40px;
+  color: black;
+  font-size: 3rem;
+}
+
+h1 span {
+  color: white;
+  border-radius: 0 15px 15px 0;
+  padding: 5px;
+  background: linear-gradient(90deg, rgba(19, 3, 3, 0.1), red);
 }
 
 /* ====== MOVIE CARD ====== */
 .movie-card {
-  background: #232526;
-  border-radius: 16px;
+  background: #8fa0a8;
+  border-radius: 20px;
   box-shadow: 0 4px 24px #000a;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  height: 450px;
+  opacity: 0.7;
   transition: transform 0.18s, box-shadow 0.18s;
   cursor: pointer;
   position: relative;
+  width: 100%; /* Make card width flexible */
+  max-width: 300px; /* Max width for larger screens */
 }
 
 .movie-card:hover {
+  opacity: 1;
   transform: scale(1.04) translateY(-6px);
   box-shadow: 0 8px 32px #000c;
 }
 
 .movie-card img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   background: #111;
 }
@@ -153,8 +100,6 @@ color: #d6000bd5;
   text-align: left;
 }
 
-
-
 .movie-description {
   font-size: 0.98rem;
   color: #b3b3b3;
@@ -167,16 +112,42 @@ color: #d6000bd5;
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px) {
-  .main-content {
-    padding: 1.2rem 0.5rem;
+  h1 {
+    font-size: 2.5rem;
+    margin-left: 20px;
   }
-  .add-movie-form,
-  .filter-bar {
-    max-width: 98vw;
-    padding: 1.2rem 1rem;
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 15px;
   }
-  .movie-card img {
-    height: 220px;
+
+  .movie-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-add-section {
+    flex-direction: column; /* Stack filter and add form */
+    align-items: center; /* Center items when stacked */
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 10px;
+  }
+
+  .movie-card {
+    height: 350px;
   }
 }
 
@@ -185,21 +156,49 @@ color: #d6000bd5;
     font-size: 1.5rem;
     padding: 1.2rem 0 0.7rem 0;
   }
-  .main-content {
-    padding: 0.5rem 0.2rem;
+
+  h1 {
+    font-size: 1.8rem;
   }
-  .add-movie-form,
-  .filter-bar {
-    padding: 1rem 0.5rem;
-    border-radius: 10px;
-  }
+
   .movie-list {
-    gap: 1.2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 5px;
   }
-  .movie-card img {
-    height: 160px;
+
+  .movie-card {
+    height: auto;
+    max-width: 90%;
+    margin: 0 auto;
   }
+
   .movie-card-content {
     padding: 0.7rem 0.5rem 0.8rem 0.5rem;
   }
-} 
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .movie-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .movie-card {
+    max-width: 95%;
+  }
+
+  .movie-title {
+    font-size: 1rem;
+  }
+
+  .movie-description {
+    font-size: 0.8rem;
+    min-height: 36px;
+    max-height: 36px;
+  }
+}

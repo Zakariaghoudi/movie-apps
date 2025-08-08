@@ -1,0 +1,99 @@
+/* AddMovieForm.css */
+.add-movie-container {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: start; /* Center the form vertically */
+  padding: 2rem;
+  position: relative;
+  right: 15rem;
+}
+
+.add-movie-form {
+  background:linear-gradient(rgba(0, 0, 0, 0.808), rgb(88, 77, 77)); /* Corrected typo */
+  width: 80%; /* Make width responsive */
+   width: 400px;
+  height: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: white ;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  box-sizing: border-box; /* Ensure padding and border are inside the element's width */
+  font-size: 1rem;
+  color: #0f1011;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.add-movie-form button[type="submit"] {
+  background-color: red;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-movie-form button[type="submit"]:hover {
+  background-color: #e01212;
+}
+
+@media (max-width: 768px) {
+  .add-movie-container {
+    padding: 1rem;
+  }
+
+  .add-movie-form {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-movie-form {
+    padding: 1.5rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"] {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .add-movie-form button[type="submit"] {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+}

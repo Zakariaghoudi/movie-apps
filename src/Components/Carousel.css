@@ -1,0 +1,113 @@
+.carousel-container {
+    width: 90%;
+    max-width: 450px;
+    height: 555px;
+    aspect-ratio: 9 / 16;
+    position: relative;
+    top: 2.5rem;
+    right: 4rem;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity:0.9;
+    transition: opacity 0.3s ease-in-out;
+     cursor: pointer;
+}
+
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+.rating{
+    display: block;
+    background-color: aliceblue;
+    position:relative;
+    bottom: 25rem;
+    gap: 1rem;
+    left:3rem;
+    size: 30px;
+    color:gold;
+
+}
+.slide-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    padding: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .prev-btn, .next-btn {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .movie-title {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev-btn, .next-btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .movie-title {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+}

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard"; // Add this import
-import "./MovieList.css";
 
 function MovieList({ movies }) {
   return (

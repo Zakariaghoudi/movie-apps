@@ -1,0 +1,65 @@
+/* --- Updated Navbar Container --- */
+.navbar {
+  border:solid 2px white;
+  width: 90%;
+  max-width: 1200px;
+  padding: 1rem; /* Adjusted padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto; /* Centered navbar */
+}
+
+/* --- Updated List Styling --- */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items when wrapped */
+  gap: 1rem; /* Adjusted gap for smaller screens */
+}
+
+/* --- Updated Filter Buttons --- */
+.navbar button {
+  color: black;
+  border: none; /* Removed border */
+  padding: 0.6rem 1.2rem; /* Adjusted padding */
+  border-radius: 8px; /* Less rounded corners for a modern feel */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* --- Updated Hover & Focus States --- */
+.navbar button:hover {
+  background-color: #4ca0ee;
+  color: #ffffff;
+}
+
+.navbar button:focus {
+  outline: 2px solid #378bf8;
+  outline-offset: 2px;
+}
+
+/* --- Updated Style for the Active Filter Button --- */
+.navbar button.active {
+  background-color: #56e2ec;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 768px) {
+  .navbar ul {
+    gap: 2rem; /* Increase gap for larger screens */
+  }
+
+  .navbar button {
+    padding: 0.6rem 1.8rem; /* Increase padding for larger screens */
+    font-size: 0.95rem;
+  }
+}
